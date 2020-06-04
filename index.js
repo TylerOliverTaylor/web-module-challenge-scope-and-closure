@@ -118,10 +118,15 @@ Final Score: 6 - 10 */
 function scoreboard(callback, innings) {
   let home = 0
   let away = 0
+  let inning = 0
   for (let i=0; i < innings; i++){
     home = callback() + home;
     away = callback() + away;
+    inning = inning + 1;
+    
+    console.log(`${inning}th inning: ${home} - ${away}`)
   } 
+  console.log(`Final Score: ${home} - ${away}`)
 }
 
 
